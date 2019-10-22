@@ -2,6 +2,7 @@ package com.java.java2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -35,6 +36,8 @@ public class Main {
 		Function<String,Integer> palab = words -> words.length();
 		
 		System.out.println("Rsultado: " + palab.apply("Jose"));
+		
+		getTreeMap();
 
 	}
 	
@@ -61,4 +64,28 @@ public class Main {
 		return datos;			
 	}
 
+	public static TreeMap<Integer, String> getTreeMap(){
+		
+		TreeMap<Integer, String> mapDatos = null;
+		try {
+			
+			mapDatos = new TreeMap<Integer, String>();
+			mapDatos.put(3, "Posición 3");
+			mapDatos.put(2, "Posición 2");
+			mapDatos.put(1, "Posición 1");
+			mapDatos.put(0, "Posición 0");
+			mapDatos.put(0, "Posición -1");
+			
+			for (int i = 0; i < mapDatos.size(); i++) {
+				System.out.println("Orden: " + mapDatos.get(i));				
+			}
+			
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		return mapDatos;
+	}
+	
 }
