@@ -2,4 +2,4 @@ sudo: false
 jdk:
   - openjdk8
   languaje:  java
-  script:  mvn clean test -f tdd/pom.xml
+  script: mvn clean test -f tdd/pom.xml
